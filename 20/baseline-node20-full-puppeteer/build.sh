@@ -1,4 +1,4 @@
-export CALVER=$(date -d "@$(($(date +%s) + 8 * 3600))" "+%Y%m%d")
+export CALVER=$(date -d "@$(($(date +%s) + 8 * 3600))" "+%Y.%-m.%-d")
 
 if docker manifest inspect "paperplanecc/baseline-node20-full:$CALVER" > /dev/null 2>&1; then
   export VERSION_TAG=$CALVER
