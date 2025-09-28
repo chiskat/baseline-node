@@ -1,6 +1,6 @@
 # paperplanecc/baseline-node20-full
 
-![](https://img.shields.io/docker/v/paperplanecc/baseline-node20-full?sort=date) ![](https://img.shields.io/docker/image-size/paperplanecc/baseline-node20-full)
+![](https://img.shields.io/docker/v/paperplanecc/baseline-node20-full?sort=semver) ![](https://img.shields.io/docker/image-size/paperplanecc/baseline-node20-full)
 
 为前端和 Node.js 开发者提供开箱即用的 Docker 镜像。[GitHub](https://github.com/paperplane-docker/baseline-node)，[源码](https://git.paperplane.cc/paperplane-docker/baseline-node)。
 

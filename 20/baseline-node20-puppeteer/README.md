@@ -1,6 +1,6 @@
 # paperplanecc/baseline-node20-puppeteer
 
-![](https://img.shields.io/docker/v/paperplanecc/baseline-node20-puppeteer?sort=date) ![](https://img.shields.io/docker/image-size/paperplanecc/baseline-node20-puppeteer)
+![](https://img.shields.io/docker/v/paperplanecc/baseline-node20-puppeteer?sort=semver) ![](https://img.shields.io/docker/image-size/paperplanecc/baseline-node20-puppeteer)
 
 为前端和 Node.js 开发者提供开箱即用且预装 Chromium 并预配 `puppeteer` 的 Docker 镜像。[GitHub](https://github.com/paperplane-docker/baseline-node)，[源码](https://git.paperplane.cc/paperplane-docker/baseline-node)。
 
