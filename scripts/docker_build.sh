@@ -4,7 +4,7 @@ docker_build() {
     --progress plain --compress \
     --build-arg NODE_VERSION=$NODE_VERSION \
     --build-arg PNPM_VERSION=$PNPM_VERSION \
-    -t "paperplanecc/$1:$CALVER" \
+    -t "chiskat/$1:$CALVER" \
     -f $2 \
     .
 }

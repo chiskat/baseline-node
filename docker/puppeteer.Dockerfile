@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=paperplanecc/baseline-node20:latest
+ARG BASE_IMAGE=chiskat/baseline-node20:latest
 FROM ${BASE_IMAGE}
 
 RUN apt-get update 

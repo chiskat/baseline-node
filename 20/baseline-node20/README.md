@@ -1,6 +1,6 @@
-# paperplanecc/baseline-node20
+# chiskat/baseline-node20
 
-![](https://img.shields.io/docker/v/paperplanecc/baseline-node20?sort=semver) ![](https://img.shields.io/docker/image-size/paperplanecc/baseline-node20)
+![](https://img.shields.io/docker/v/chiskat/baseline-node20?sort=semver) ![](https://img.shields.io/docker/image-size/chiskat/baseline-node20)
 
 为前端和 Node.js 开发者提供开箱即用的 Docker 镜像。[GitHub](https://github.com/paperplane-docker/baseline-node)，[源码](https://git.paperplane.cc/paperplane-docker/baseline-node)。
 
@@ -9,4 +9,4 @@
 
 # 使用需知
 
-- 注意 `-slim` 的镜像较为精简，如果遇到缺失系统组件等问题，建议使用 `paperplanecc/baseline-node20-full` 镜像。
+- 注意 `-slim` 的镜像较为精简，如果遇到缺失系统组件等问题，建议使用 `chiskat/baseline-node20-full` 镜像。

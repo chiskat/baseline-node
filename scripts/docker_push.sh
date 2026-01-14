@@ -1,5 +1,5 @@
 docker_push() {
-  docker login -u paperplanecc -p $DOCKER_PASS
+  docker login -u chiskat -p $DOCKER_PASS
 
   if [ -n "${NODE_NPM_VERSION+x}" ]; then
 	  docker tag "$1:$CALVER" "$1:$NODE_NPM_VERSION"
