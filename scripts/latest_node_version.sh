@@ -3,7 +3,7 @@ latest_node_version() {
   local versions
   local ver
 
-  versions=$(docker run --rm curlimages/curl -s https://nodejs.org/dist/index.json \
+  versions=$(curl -s https://nodejs.org/dist/index.json \
     | grep -o "\"version\":\"v${MAJOR}[^\"]*\"" \
     | sed 's/"version":"v//;s/"//' \
     | sort -rV)
