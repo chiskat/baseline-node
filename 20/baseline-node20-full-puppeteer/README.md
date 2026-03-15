@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/docker/v/chiskat/baseline-node20-full-puppeteer?sort=semver) ![](https://img.shields.io/docker/image-size/chiskat/baseline-node20-full-puppeteer)
 
-为前端和 Node.js 开发者提供开箱即用且预装 Chromium 并预配 `puppeteer` 的 Docker 镜像。[GitHub](https://github.com/paperplane-docker/baseline-node)，[源码镜像](https://git.paperplane.cc/paperplane-docker/baseline-node)。
+为前端和 Node.js 开发者提供开箱即用且预装 Chromium 并预配 `puppeteer` 的 Docker 镜像。[GitHub](https://github.com/chiskat/baseline-node)，[源码镜像](https://git.paperplane.cc/chiskat/baseline-node)。
 
 - 基于 `chiskat/baseline-node20-full` 并同步更新，预装 Chromium 以及相关依赖和字体（包括一套 Emoji 字体）；
 - 为 `puppeteer` 配置好了浏览器的启动路径和免下载标志位，可以开箱即用；

@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/docker/v/chiskat/baseline-node20-alpine?sort=semver) ![](https://img.shields.io/docker/image-size/chiskat/baseline-node20-alpine)
 
-为前端和 Node.js 开发者提供开箱即用的 Docker 镜像。[GitHub](https://github.com/paperplane-docker/baseline-node)，[源码镜像](https://git.paperplane.cc/paperplane-docker/baseline-node)。
+为前端和 Node.js 开发者提供开箱即用的 Docker 镜像。[GitHub](https://github.com/chiskat/baseline-node)，[源码镜像](https://git.paperplane.cc/chiskat/baseline-node)。
 
 - 基于 `node:20-apline`，并通过 `corepack` 开启 `pnpm` 支持；
 - 预装 `libc6-compat` 相关系统组件，从而兼容 Next.js；
