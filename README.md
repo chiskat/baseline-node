@@ -1,4 +1,4 @@
-# PaperPlane BaseLine Node [![Build Status](https://drone.paperplane.cc/api/badges/paperplane-docker/baseline-node/status.svg?ref=refs/heads/main)](https://drone.paperplane.cc/paperplane-docker/baseline-node)
+# PaperPlane BaseLine Node
 
 本项目旨在为前端和 Node.js 开发者提供开箱即用的 Docker 镜像。
 

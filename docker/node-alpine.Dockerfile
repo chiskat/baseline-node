@@ -7,6 +7,9 @@ ARG PNPM_VERSION=latest
 RUN corepack enable && \
   corepack prepare pnpm@${PNPM_VERSION} --activate
 
+ARG NPM_VERSION=latest
+RUN npm install -g npm@${NPM_VERSION}
+
 ENV PNPM_HOME=/usr/local/pnpm
 ENV PATH="${PNPM_HOME}/bin:${PATH}"
 RUN pnpm config set global-bin-dir ${PNPM_HOME}/bin

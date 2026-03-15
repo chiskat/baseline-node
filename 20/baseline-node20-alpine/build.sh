@@ -1,8 +1,10 @@
 source "/repo/scripts/latest_node_version.sh"
+source "/repo/scripts/latest_npm_version.sh"
 source "/repo/scripts/latest_pnpm_version.sh"
 
 export CALVER=$(date -d "@$(($(date +%s) + 8 * 3600))" "+%Y.%-m.%-d")
 export NODE_VERSION="$(latest_node_version 20)-alpine"
+export NPM_VERSION=$(latest_npm_version)
 export PNPM_VERSION=$(latest_pnpm_version)
 
 export NODE_NPM_VERSION="node${NODE_VERSION}-pnpm${PNPM_VERSION}"
