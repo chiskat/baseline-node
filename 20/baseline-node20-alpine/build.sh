@@ -2,12 +2,12 @@ REPO_ROOT="${REPO_ROOT:-/repo}"
 
 source "$REPO_ROOT/scripts/latest_node_version.sh"
 source "$REPO_ROOT/scripts/latest_npm_version.sh"
-source "$REPO_ROOT/scripts/latest_pnpm_version.sh"
+source "$REPO_ROOT/scripts/latest_pnpm_10_version.sh"
 
 export CALVER=$(date -d "@$(($(date +%s) + 8 * 3600))" "+%Y.%-m.%-d")
 export NODE_VERSION="$(latest_node_version 20)-alpine"
 export NPM_VERSION=$(latest_npm_version)
-export PNPM_VERSION=$(latest_pnpm_version)
+export PNPM_VERSION=$(latest_pnpm_10_version)
 
 export NODE_NPM_VERSION="node${NODE_VERSION}-pnpm${PNPM_VERSION}"
 
@@ -15,7 +15,7 @@ if ! docker manifest inspect "chiskat/baseline-node20-alpine:$NODE_NPM_VERSION" 
   source "$REPO_ROOT/scripts/docker_build.sh"
   source "$REPO_ROOT/scripts/docker_push.sh"
 
-  docker_build "baseline-node20-alpine" "$REPO_ROOT/docker/node-alpine.Dockerfile"
+  docker_build "baseline-node20-alpine" "$REPO_ROOT/docker/node20-alpine.Dockerfile"
   docker_push "chiskat/baseline-node20-alpine"
 fi
 
