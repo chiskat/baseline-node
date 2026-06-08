@@ -1,4 +1,4 @@
-# PaperPlane BaseLine Node
+# BaseLine Node (by chiskat)
 
 本项目旨在为前端和 Node.js 开发者提供开箱即用的 Docker 镜像。
 
