@@ -1,0 +1,47 @@
+name: Build Node 22 Images
+
+on:
+  workflow_call:
+
+jobs:
+  build-node22:
+    name: baseline-node22 (slim)
+    uses: ./.github/workflows/build-image.yml
+    with:
+      image_name: baseline-node22 (slim)
+      build_script: 22/baseline-node22/build.sh
+    secrets: inherit
+
+  build-node22-alpine:
+    name: baseline-node22-alpine
+    uses: ./.github/workflows/build-image.yml
+    with:
+      image_name: baseline-node22-alpine
+      build_script: 22/baseline-node22-alpine/build.sh
+    secrets: inherit
+
+  build-node22-full:
+    name: baseline-node22-full
+    uses: ./.github/workflows/build-image.yml
+    with:
+      image_name: baseline-node22-full
+      build_script: 22/baseline-node22-full/build.sh
+    secrets: inherit
+
+  build-node22-puppeteer:
+    name: baseline-node22-puppeteer
+    needs: build-node22
+    uses: ./.github/workflows/build-image.yml
+    with:
+      image_name: baseline-node22-puppeteer
+      build_script: 22/baseline-node22-puppeteer/build.sh
+    secrets: inherit
+
+  build-node22-full-puppeteer:
+    name: baseline-node22-full-puppeteer
+    needs: build-node22-full
+    uses: ./.github/workflows/build-image.yml
+    with:
+      image_name: baseline-node22-full-puppeteer
+      build_script: 22/baseline-node22-full-puppeteer/build.sh
+    secrets: inherit

@@ -15,7 +15,7 @@ if ! docker manifest inspect "chiskat/baseline-node20-full:$NODE_NPM_VERSION" >/
   source "$REPO_ROOT/scripts/docker_build.sh"
   source "$REPO_ROOT/scripts/docker_push.sh"
 
-  docker_build "baseline-node20-full" "$REPO_ROOT/docker/node20.Dockerfile"
+  docker_build "baseline-node20-full" "$REPO_ROOT/docker/node-corepack.Dockerfile"
   docker_push "chiskat/baseline-node20-full"
 fi
 
