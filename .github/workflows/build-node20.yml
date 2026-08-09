@@ -12,6 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.5.2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
       - uses: docker/setup-qemu-action@v3
 
       - uses: docker/setup-buildx-action@v3
@@ -25,7 +34,9 @@ jobs:
         env:
           DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
           REPO_ROOT: ${{ github.workspace }}
-        run: bash "$REPO_ROOT/20/baseline-node20/build.sh"
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm exec tsx "$REPO_ROOT/20/baseline-node20/build.ts"
 
   build-node20-alpine:
     name: baseline-node20-alpine
@@ -33,6 +44,15 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.5.2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
       - uses: docker/setup-qemu-action@v3
 
       - uses: docker/setup-buildx-action@v3
@@ -46,7 +66,9 @@ jobs:
         env:
           DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
           REPO_ROOT: ${{ github.workspace }}
-        run: bash "$REPO_ROOT/20/baseline-node20-alpine/build.sh"
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm exec tsx "$REPO_ROOT/20/baseline-node20-alpine/build.ts"
 
   build-node20-full:
     name: baseline-node20-full
@@ -54,6 +76,15 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.5.2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
       - uses: docker/setup-qemu-action@v3
 
       - uses: docker/setup-buildx-action@v3
@@ -67,7 +98,9 @@ jobs:
         env:
           DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
           REPO_ROOT: ${{ github.workspace }}
-        run: bash "$REPO_ROOT/20/baseline-node20-full/build.sh"
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm exec tsx "$REPO_ROOT/20/baseline-node20-full/build.ts"
 
   build-node20-puppeteer:
     name: baseline-node20-puppeteer
@@ -76,6 +109,15 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.5.2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
       - uses: docker/setup-qemu-action@v3
 
       - uses: docker/setup-buildx-action@v3
@@ -89,7 +131,9 @@ jobs:
         env:
           DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
           REPO_ROOT: ${{ github.workspace }}
-        run: bash "$REPO_ROOT/20/baseline-node20-puppeteer/build.sh"
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm exec tsx "$REPO_ROOT/20/baseline-node20-puppeteer/build.ts"
 
   build-node20-full-puppeteer:
     name: baseline-node20-full-puppeteer
@@ -98,6 +142,15 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.5.2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
       - uses: docker/setup-qemu-action@v3
 
       - uses: docker/setup-buildx-action@v3
@@ -111,4 +164,6 @@ jobs:
         env:
           DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
           REPO_ROOT: ${{ github.workspace }}
-        run: bash "$REPO_ROOT/20/baseline-node20-full-puppeteer/build.sh"
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm exec tsx "$REPO_ROOT/20/baseline-node20-full-puppeteer/build.ts"
